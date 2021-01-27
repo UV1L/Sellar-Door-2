@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  .content-wrapper
+    .reservation-form
+
+      p.info Бронирование столика
+
+      form.reservation-form__form(action="/reservation", method="post")
+        .form__group
+          input#username.admin__field.form__input(type="text", name="username", autocomplete="off", required)
+
+          span.form__bar
+
+          label.form__label(for="username") Ваше имя 
+
+        .form__group
+          input#email.admin__field.form__input(type="email", name="email", autocomplete="off", required)
+
+          span.form__bar
+
+          label.form__label(for="email") Ваша почта 
+
+
+        .button-wrapper
+          button.admin__button.button(type="submit") Бронировать место
+
+  .on-tapped 
+    .p Место успешно забронировано! 
+    .p На вашу почту пришел проверочный код. Назовите его, когда будете входить в зал!
+
+block footer
+  include footer.pug

@@ -1,0 +1,25 @@
+extends layout 
+
+block content 
+  .content
+    .contacts-wrapper
+      ul.contacts-items
+        li.contact-item
+            a.contact-link#vk(href="https://vk.com/id473612876") Мы ВКонтакте!
+        a.vk-link(href="https://vk.com/id473612876")
+          img(src="../images/vk.svg")
+
+        li.contact-item
+            a.contact-link#inst(href="https://www.instagram.com/run_out_of_life/") Мы в Инстаграм!
+        a.inst-link(href="https://www.instagram.com/run_out_of_life/")
+          img(src="../images/instagram.svg")
+
+        li.contact-item
+            a.contact-link#mail(href="mailto:antonvasyanovich1@gmail.com") Наша почта!
+        a.mail-link(href="mailto:antonvasyanovich1@gmail.com")
+            img(src="../images/email.svg")
+
+    .figcaption
+      .p Мы заботимся о своих клиентах и готовы выслушать любую критику в свой адрес.
+      br 
+      .p Напишите нам, и наш консультант обязательно поможет вам!

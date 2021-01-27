@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@font-face {
+    font-family: 'Hamiltone';
+    src: url('../fonts/20094.ttf');
+}
+
+@font-face {
+    font-family: 'Splatted';
+    src: url('../fonts/19861.ttf');
+}
+
+@font-face {
+    font-family: 'Honey';
+    src: url('../fonts/19539.otf');
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background-image: url('../images/background.jpg');
+}
+
+.bottomMenu {
+    display: none;
+    bottom: top;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.menu-name {
+    font-family: 'Splatted', sans-serif;
+    font-size: 6vw;
+    color: rgb(204, 181, 132);
+    margin-top: 0;
+    transition: all 1.5s;
+    text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 45px
+}
+
+.header-link {
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+.name {
+    font-family: 'Splatted', sans-serif;
+    font-size: 10vh;
+    color: white;
+    margin-top: 0;
+    transition: all 1.5s;
+}
+
+.name:hover {
+    color: rgb(204, 181, 132);
+}
+
+.header-nav {
+    position: relative;
+    right: 50px;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Honey', sans-serif;
+    font-size: 4vh;
+    text-shadow: black 1px 1px 1px;
+}
+
+.nav-item {
+    padding-left: 30px;
+}
+
+ul li::marker {
+    font-size: 0;
+}
+
+.nav-link {
+    color: white;
+    transition: all 1.5s;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: rgb(204, 181, 132);
+    transition: all 1.5s;
+}
+
+.nav-link::after {
+    display: block;
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: rgb(204, 181, 132);
+    transition: all 0.5s;
+}
+
+.nav-link:hover::after {
+    display: block;
+    width: 100%;
+    transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-wrapper {
+    margin-top: 10%;
+    width: 60%;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    margin-bottom: 150px;
+}
+
+.dishes-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.block {
+    margin-top: 30px;
+    display: flex;
+}
+
+.block:nth-child(2n) {
+    flex-direction: row-reverse;
+    text-align: start;
+}
+
+.block:last-child {
+    margin-bottom: 15px;
+}
+
+.dish {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    max-height: 230px;
+    max-width: 350px;
+    border-radius: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.first {
+    padding-top: 4vw;
+    margin-top: 0;
+}
+
+.about {
+    margin-left: 10px;
+    font-family: 'Honey', sans-serif;
+    font-size: 2vw;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contacts-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    margin-top: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.contacts-items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "vk inst mail" "vk-link inst-link mail-link";
+    justify-items: center;
+    align-items: end;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.contact-link {
+    color: black;
+    font-family: 'Honey', sans-serif;
+    font-size: 2vw;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: red;
+}
+
+.vk-link {
+    grid-area: vk-link;
+}
+
+.inst-link {
+    grid-area: inst-link;
+}
+
+.mail-link {
+    grid-area: mail-link;
+    opacity: 0.7;
+}
+
+.mail-link,
+.inst-link,
+.vk-link {
+    margin-top: 10px;
+    transition: all 5s;
+}
+
+.vk-link:hover,
+.inst-link:hover,
+.mail-link:hover {
+    transform: rotate(3600deg);
+    transition: 5s;
+}
+
+.figcaption {
+    max-width: inherit;
+    margin-top: 100px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: white;
+    text-shadow: rgb(204, 181, 132) 1px 1px 1px;
+    font-size: 2vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-wrapper {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 70px;
+    border-radius: 20px 20px 0 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+}
+
+.links li {
+    margin: 15px 15px 15px 15px
+}
+
+.content-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.reservation-form {
+    font-family: 'Honey';
+    color: black;
+    text-shadow: rgb(204, 181, 132) 1px 1px 1px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+
+.info {
+    font-size: 50px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form__group {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.form__input {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    width: 35%;
+    font-size: 32px;
+    transition: 0.2s ease-in-out;
+}
+
+.form__input:focus {
+    width: 75%;
+}
+
+.form__label {
+    font-size: 32px;
+    margin-left: 5px;
+}
+
+.button-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button {
+    font-family: 'Honey';
+    border-radius: 10px;
+    border: none;
+    font-size: 30px;
+    transition: 0.15s ease-in-out;
+}
+
+.button:hover {
+    background-color: rgb(204, 181, 132);
+    transition: 0.15s ease-in-out;
+    color: white;
+}
+
+.on-tapped {
+    display: none;
+    text-align: center;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+    font-family: "PT Sans Narrow";
+    color: white;
+    font-size: 45px;
+    transition: 0.5s ease-in-out;
+    text-shadow: rgb(204, 181, 132) 1px 1px 1px;
+}
+
+@media (max-width: 576px) {
+    .header-content {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-link {
+        margin-left: 0;
+    }
+    .header-nav {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nav-items {
+        padding-left: 0;
+    }
+    .nav-item:first-child {
+        padding-left: 0
+    }
+}

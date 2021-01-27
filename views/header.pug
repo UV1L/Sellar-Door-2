@@ -1,0 +1,14 @@
+header.header.content
+  a.header__link(href="/")
+    h1.header__logo.logo #[span.color-primary Lorem] Ipsum
+
+  nav.header__nav.nav
+    ul.nav__items
+      li.nav__item(class=(name==="index" ? "nav__item--active" : ''))
+        a.nav__link(href="/") Главная 
+
+      li.nav__item(class=(name==="billboard" ? "nav__item--active" : ''))
+        a.nav__link(href="/billboard") Афиша
+
+      li.nav__item(class=(name==="contacts" ? "nav__item--active" : ''))
+        a.nav__link(href="/contacts") Контакты 

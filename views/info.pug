@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  div.content-wrapper
+    div.info-page
+      h3.subtitle= message
+
+      if errors 
+        ul
+          for error in errors
+            li!= error.msg

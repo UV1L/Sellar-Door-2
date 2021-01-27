@@ -1,0 +1,15 @@
+div.container
+    header.header-content
+        a.header-link(href='/')
+            h1.name SellarDoor
+
+        nav.header-nav.nav
+            ul.nav-items
+                li.nav-item(class=(name==="index" ? "nav-item--active" : ''))
+                    a.nav-link(href="/") Добро пожаловать
+
+                li.nav-item(class=(name==="reservation" ? "nav-item--active" : ''))
+                    a.nav-link(href="/reservation") Бронь
+
+                li.nav-item(class=(name==="contacts" ? "nav-item--active" : ''))
+                    a.nav-link(href="/contacts") Контакты 
